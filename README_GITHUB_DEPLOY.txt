@@ -1,11 +1,11 @@
-AI CAMERA Mobile V9 PaddleOCR Only Diagnostic
+AI CAMERA Mobile V10 Tesseract Fast ROI
 
 Upload to GitHub root:
 - index.html
 - standard_texts.json
 
-Changes:
-- Removed Tesseract fallback because it was slow and generated unstable OCR overlays.
-- Uses PaddleOCR.js only. If PaddleOCR.js fails to load, it shows a quick red ROI box instead of waiting 7-10 seconds.
-- Crops upper product text ROI before OCR and downscales to max width 760px.
-- The middle button shows small version label V9.
+V10 notes:
+- Shows V10 under the Open Camera button.
+- Uses Tesseract Japanese OCR, but only on a strict upper text ROI.
+- Downscales ROI to max width 520px for faster recognition.
+- This is a fallback path because V9 confirmed PaddleOCR.js CDN loading failed on iPhone Safari/GitHub Pages.
